@@ -16,9 +16,12 @@
             -ms-filter: grayscale(100%);
             -o-filter: grayscale(100%);
             filter: grayscale(100%);
+            width: 100%;
+            transition: filter 3s;
         }
 
-        @keyframes myfirst {
+
+        /* @keyframes myfirst {
             0% {
                 filter: grayscale(100%);
             }
@@ -26,7 +29,7 @@
             100% {
                 filter: grayscale(0%);
             }
-        }
+        } */
     </style>
 </head>
 
@@ -34,7 +37,7 @@
     <input type="file" id="file"><button type="button" onclick="showImage()">展示</button>
     <br>
     <div class="box">
-        <img src="" class="img" id="img" style="width: 100%" />
+        <img src="" class="img" id="img" />
     </div>
 
     <script>
@@ -48,7 +51,7 @@
             img.src = url;
         }
         img.onclick = function () {
-            img.setAttribute('style', 'width: 100%;animation: myfirst 5s;')
+            img.setAttribute('style', 'filter:grayscale(0%)')
         }
     </script>
 </body>
